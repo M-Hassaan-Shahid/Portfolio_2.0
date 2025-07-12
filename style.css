@@ -77,22 +77,24 @@ span {
   border-bottom: 3px solid var(--main-color);
 }
 .gradient-btn {
-  padding: 1rem 2rem;
-  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem;
+  font-size: 2rem;
   background: linear-gradient(270deg, #df8908, #ff1d15);
   color: black;
   font-weight: 600;
-  border-radius: 3rem;
+  border-radius: 50%;
   border: none;
+  text-align: center;
   cursor: pointer;
-  letter-spacing: 1px;
   transition: 0.3s ease-in-out;
-  white-space: nowrap;
-  text-wrap: nowrap;
 }
 .gradient-btn:hover {
   transform: scale(1.1);
 }
+
 section {
   min-height: 100vh;
   padding: 10rem 15%;
@@ -287,10 +289,10 @@ section {
   border: 5px solid transparent;
   transition: 0.4s ease-in-out;
 }
-.border{
-    border: 5px solid var(--main-color);
-    padding: 1rem;
-    border-radius: 3.9rem;
+.border {
+  border: 5px solid var(--main-color);
+  padding: 1rem;
+  border-radius: 3.9rem;
 }
 .border:hover {
   border: none;
@@ -420,4 +422,20 @@ footer p {
   color: var(--text-color);
   transform: scale(1.05) translateY(-2px);
   box-shadow: 0 0 25px var(--main-color), 0 0 30px var(--main-color);
+}
+
+.btn:focus,
+.navbar a:focus,
+.gradient-btn:focus {
+  outline: 2px solid var(--main-color);
+  outline-offset: 2px;
+}
+.light-mode {
+  --bg-color: #f4f4f4;
+  --second-bg-color: #e0e0e0;
+  --text-color: #333;
+  --main-color: #ff6200;
+}
+#sun {
+  display: none;
 }

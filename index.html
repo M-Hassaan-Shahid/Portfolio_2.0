@@ -9,6 +9,10 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="shortcut icon" href="images/about.png" type="image/x-icon">
   </head>
   <body>
     <header class="header">
@@ -26,8 +30,8 @@
             <a href="#contact">Contact</a>
         </nav>
         <button class="gradient-btn" aria-label="Toggle Light/Dark Mode">
-            <!-- <i class="bx bx-moon"></i> -->
-            <i class="bx bx-sun"></i>
+            <i class="bx bx-moon" id="moon"></i>
+            <i class="bx bx-sun" id="sun"></i>
 
         </button>
     </header>
@@ -64,13 +68,13 @@
         </div>
         
         <div class="home-img">
-            <img src="profile.jpg" alt="Home Image" />
+            <img src="profile.jpg" alt="Profile" loading="lazy" />
         </div>
 
     </section>
     <section class="about" id="about">
         <div class="about-img">
-            <img src="profile.jpg" alt="About Image" />
+            <img src="profile.jpg" alt="Profile" loading="lazy" />
         </div>
         <div class="about-content">
             <h2>About <span>Me</span></h2>
@@ -179,6 +183,7 @@
             </div>
         </div>
     </section>
+    
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
         <form action="#" method="post">
