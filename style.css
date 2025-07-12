@@ -277,13 +277,23 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--bg-color);
   background-color: var(--main-color);
+
   height: 500px;
   border-radius: 3rem;
   cursor: pointer;
   padding: 5rem 2rem;
   border: 5px solid transparent;
   transition: 0.4s ease-in-out;
+}
+.border{
+    border: 5px solid var(--main-color);
+    padding: 1rem;
+    border-radius: 3.9rem;
+}
+.border:hover {
+  border: none;
 }
 .service-box:hover {
   transform: scale(1.05);
@@ -408,6 +418,6 @@ footer p {
 .social-icon a:hover {
   background: var(--main-color);
   color: var(--text-color);
-  transform: scale(1.2) translateY(-5px);
-  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 0 25px var(--main-color), 0 0 30px var(--main-color);
 }
