@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+:root {
+  --bg-color: #080808;
+  --second-bg-color: #101010;
+  --text-color: #fff;
+  --main-color: #ea580c;
+}
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+#menu-icon {
+  font-size: 3.5rem;
+  color: var(--text-color);
+  display: none;
+}
+.logo {
+  font-size: 3em;
+  color: var(--text-color);
+  font-weight: 800;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  display: flex;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+span {
+  background: linear-gradient(270deg, #df8908, #ff1d15);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.navbar a {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+  margin-left:3rem;
+  margin-right: 3rem;
+  border-bottom: 3px solid transparent;
+  text-wrap: nowrap;
+}
+.navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+.gradient-btn {
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  background: linear-gradient(270deg, #df8908, #ff1d15);
+  color: white;
+  font-weight: 500;
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: 0.3s ease-in-out;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+.gradient-btn:hover {
+  transform: scale(1.1);
+  /* background: linear-gradient(270deg, #ff1d15, #df8908);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+}
