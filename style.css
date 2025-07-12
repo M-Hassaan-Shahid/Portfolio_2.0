@@ -43,9 +43,9 @@ body {
   font-size: 3em;
   color: var(--text-color);
   font-weight: 800;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
-  display: flex;
+  /* display: flex; */
 }
 .logo:hover {
   transform: scale(1.1);
@@ -438,4 +438,135 @@ footer p {
 }
 #sun {
   display: none;
+}
+.journey {
+  min-height: 100vh;
+  padding: 10rem 15%;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.journey .heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.journey-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2.5rem; /* Offset for the vertical line */
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 4rem; /* Space between items */
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.5rem; /* Aligns dot to the left of the content */
+  top: 50%; /* Centers vertically with the box */
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--main-color);
+  border: 4px solid var(--bg-color);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-content {
+  background: var(--second-bg-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 15px rgba(234, 88, 12, 0.3);
+  transition: 0.3s ease-in-out;
+  margin-left: 0; /* Removed margin to align with dot */
+  position: relative;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+.timeline-content h3 {
+  font-size: 3rem;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.timeline-box {
+  margin: 3rem 0;
+  padding: 1.5rem;
+  background: var(--bg-color);
+  border-left: 4px solid var(--main-color);
+  border-radius: 0 1rem 1rem 0;
+  position: relative;
+  padding-left: 2rem; /* Additional padding for alignment */
+}
+
+.timeline-box .date {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--main-color);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-box h4 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-box p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.timeline-box::before {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid var(--bg-color);
+}
+
+.timeline-item:not(:last-child) .timeline-box {
+  margin-bottom: 5rem;
+}
+
+.timeline-item:not(:last-child) .timeline-box::after {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  top: 100%;
+  height: calc(100% + 2rem); /* Extend line to next dot */
+  width: 2px;
+  background: var(--main-color);
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 2rem;
+  }
+  .timeline-dot {
+    left: -2rem;
+  }
+  .timeline-content {
+    margin-left: 0;
+  }
 }
