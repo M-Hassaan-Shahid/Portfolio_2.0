@@ -21,7 +21,7 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <!-- <a href="#skills">Skills</a> -->
+            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -30,7 +30,7 @@
     <section class="home" id="home">
         <div class="home-content">
             <h1>Hi, It's <span>Hassaan</span></h1>
-            <h3>I'am a <span>Web Developer</span></h3>
+            <h3>I'm a <span>Web Developer</span></h3>
             <p>
                 I am a web developer with a passion for creating dynamic and
                 responsive websites. I specialize in front-end development,
@@ -38,10 +38,10 @@
                 experience.
             </p>
             <div class="social-icons">
-                <a href="#">
+                <!-- <a href="#">
                     <i class="bx bxl-facebook"></i>
 
-                </a>
+                </a> -->
                 <a href="#">
                     <i class="bx bxl-instagram"></i>
          
@@ -84,31 +84,123 @@
         <h2 class="heading">My <span>Services</span></h2>
         <div class="services-container">
             <div class="service-box">
-                <i class="bx bxs-paint"></i>
-                <h3>Web Design</h3>
+                <div class="service-info">
+                    <i class="bx bxs-paint"></i>
+                <h3> Web Design</h3>
                 <p>
                     Crafting visually appealing and user-friendly web designs that
                     enhance user experience.
                 </p>
+                
+                </div>
             </div>
             <div class="service-box">
-                <i class="bx bxs-code-alt"></i>
-                <h3>Web Development</h3>
+                <div class="service-info">
+                   <i class='bx  bx-code'  ></i> 
+                <h3> Web Dev</h3>
                 <p>
                     Developing robust and scalable web applications using modern
                     technologies and frameworks.
-                </p>
+                </p></div>
+                
             </div>
             <div class="service-box">
-                <i class="bx bxs-bug"></i>
-                <h3>Bug Fixing</h3>
+                <div class="service-info">
+               <i class="bx bxs-bug"></i>
+                <h3>  Bug Fixing</h3>
                 <p>
                     Identifying and resolving bugs to ensure smooth functionality
                     and optimal performance of web applications.   
 
-                </p>
+                </p></div>
+            </div>
+                 <div class="service-box">
+                <div class="service-info">
+                    
+                <i class='bx bxl-figma' ></i>
+                    <h3>Frontend Dev</h3>
+                <p>
+                    Specializing in front-end development to create interactive and
+                    responsive user interfaces that engage users effectively.
+                </p></div>
+
+
             </div>
 
     </section>
+
+
+    <section class="projects" id="projects">
+        <h2 class="heading">My <span>Projects</span></h2>
+        <div class="projects-box">
+            <div class="project-card">
+                <img src="profile.jpg" alt="Project 1" />
+                <h3>Project 1</h3>
+                <p>
+                    A web application that allows users to manage their tasks
+                    efficiently.
+                </p>
+                <div class="btn">
+                    <a href="#" class="btn">View Code</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="profile.jpg" alt="Project 2" />
+                <h3>Project 2</h3>
+                <p>
+                    An e-commerce platform that provides a seamless shopping
+                    experience.
+                </p>
+                <div class="btn">
+                    <a href="#" class="btn">View Code</a>
+            </div>
+            </div>
+            <div class="project-card">
+                <img src="profile.jpg" alt="Project 3" />
+                <h3>Project 3</h3>
+                <p>
+                    A portfolio website showcasing my skills and projects in web
+                    development.
+                </p>
+                <div class="btn">
+                    <a href="#" class="btn">View Code</a>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="#" method="post">
+            <div class="input-group">
+                <div class="input-box">
+                <input type="text" placeholder="Full Name" required  />
+                <input type="email" placeholder="Email" required />
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Phone Number" required />
+                <input type="text" placeholder="Subject" required />
+            </div>
+            </div>
+              <div class="input-group"> <div class="input-box">
+                <textarea placeholder="Your Message" required cols="53" rows="10"></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button></div>
+           
+        </form>
+    </section>
+    <footer class="footer">
+        
+        <p><span>&copy; Muhammad Hassaan Shahid</span> All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-github"></i></a>
+        </div>
+         <div class="social-icons">
+         <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+        
   </body>
 </html>
