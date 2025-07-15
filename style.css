@@ -710,6 +710,12 @@ footer p {
   .header #menu-icon {
     font-size: 4rem;
   }
+  .header .active{
+    margin: -44rem -18rem;
+    padding: 39rem 10rem;
+    padding-right: 28rem;
+    padding-top: 76rem;
+  }
   .header .gradient-btn i{
     font-size: 2.1rem;
    
