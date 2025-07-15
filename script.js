@@ -1,6 +1,8 @@
-// script.js
 const themeToggle = document.querySelector('.gradient-btn');
 const body = document.body;
+const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
+const navLinks = document.querySelectorAll('.navbar a');
 
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('light-mode');
@@ -8,9 +10,15 @@ themeToggle.addEventListener('click', () => {
   document.getElementById('moon').style.display = isLightMode ? 'none' : 'block';
   document.getElementById('sun').style.display = isLightMode ? 'block' : 'none';
 });
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-menuIcon.onclick = () => {
+
+menuIcon.addEventListener('click', () => {
   menuIcon.classList.toggle('bx-x');
   navbar.classList.toggle('active');
-}
+});
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navbar.classList.remove('active');
+    menuIcon.classList.remove('bx-x');
+  });
+});

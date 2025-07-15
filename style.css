@@ -103,6 +103,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
   gap: 15rem;
 }
 .home-content {
@@ -219,8 +220,10 @@ section {
   align-items: center;
   justify-content: center;
   gap: 10rem;
+  min-height: 100vh;
   background: var(--second-bg-color);
 }
+
 .about-img img {
   width: 32vw;
   height: 32vw;
@@ -369,6 +372,7 @@ section {
   font-size: 1.6rem;
 }
 .contact {
+  min-height: 100vh;
   background-color: var(--second-bg-color);
 }
 .contact h2 {
@@ -445,7 +449,7 @@ footer p {
 }
 .journey {
   min-height: 100vh;
-  padding: 10rem 15%;
+  padding: 10rem 5%;
   background: var(--bg-color);
   color: var(--text-color);
 }
@@ -457,32 +461,24 @@ footer p {
 
 .journey-container {
   position: relative;
-  max-width: 1200px;
+  max-width: 2200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .timeline {
   position: relative;
-  padding-left: 2.5rem; /* Offset for the vertical line */
+  margin: 0 auto;
+  width: 1000px;
 }
 
 .timeline-item {
   position: relative;
   width: 100%;
   margin-bottom: 4rem; /* Space between items */
-}
-
-.timeline-dot {
-  position: absolute;
-  left: -2.5rem; /* Aligns dot to the left of the content */
-  top: 50%; /* Centers vertically with the box */
-  transform: translateY(-50%);
-  width: 1.5rem;
-  height: 1.5rem;
-  background: var(--main-color);
-  border: 4px solid var(--bg-color);
-  border-radius: 50%;
-  z-index: 1;
 }
 
 .timeline-content {
@@ -492,8 +488,9 @@ footer p {
   border: 2px solid var(--main-color);
   box-shadow: 0 0 15px rgba(234, 88, 12, 0.3);
   transition: 0.3s ease-in-out;
-  margin-left: 0; /* Removed margin to align with dot */
+  /* margin-left: 0; Removed margin to align with dot */
   position: relative;
+  margin: 0 auto;
 }
 
 .timeline-content:hover {
@@ -536,7 +533,7 @@ footer p {
 }
 
 .timeline-box::before {
-  content: '';
+  content: "";
   position: absolute;
   left: -2.5rem;
   top: 50%;
@@ -553,7 +550,7 @@ footer p {
 }
 
 .timeline-item:not(:last-child) .timeline-box::after {
-  content: '';
+  content: "";
   position: absolute;
   left: -2.5rem;
   top: 100%;
@@ -562,70 +559,237 @@ footer p {
   background: var(--main-color);
   z-index: 0;
 }
-@media(max-width: 1285px){
-  #menu-icon{
+@media (max-width: 1185px) {
+  #menu-icon {
     display: block;
   }
+
   .navbar {
     position: absolute;
     top: 100%;
-    right: 0;
+    right: -100%;
     width: 50%;
-    padding: 1rem 3rem;
-    background: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.9);
     border-bottom-left-radius: 2rem;
     border-left: 2px solid var(--main-color);
     border-bottom: 2px solid var(--main-color);
-    display: none;
-
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease-in-out;
   }
+
+  .navbar.active {
+    right: 0;
+  }
+
   .navbar a {
     display: block;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     font-size: 2rem;
     color: var(--text-color);
   }
-  .navbar.active{
-    display: block;
-  }
-  .home{
 
+  .home {
     flex-direction: column-reverse;
-    margin: 4rem 0;
-    gap: 8rem;
+    gap: 3rem;
+    padding-top: 10rem;
+    margin: 0;
   }
-  .home-content h1{
-    /* margin-top: 4rem; */
-    font-size: 5rem;
-    text-align: center;
-  }
- 
+
   .home-content {
     align-items: center;
     text-align: center;
   }
-  .home-img  img{
+
+  .home-content h1 {
+    font-size: 4.5rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .home-img {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .about-img {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .about-content h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact h2 {
+    font-size: 4rem;
+  }
+
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .projects-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  .navbar {
+    width: 70%;
+  }
+
+  .home-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 1.4rem;
+  }
+
+  .home-img {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .about-img {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .contact form input,
+  .contact form textarea {
+    max-width: 100%;
+  }
+  .timeline .timeline-content h3 {
+    font-size: 2.2rem;
+  }
+
+  .timeline-box h4 {
+    font-size: 1.8rem;
+  }
+
+  .timeline-box p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+  .header a{
+    font-size: 2.5rem;
+  }
+  .services h2 {
+    font-size: 4rem;
+  }
+  .projects h2 {
+    font-size: 4rem;
+  }
+  .contact h2 {
+    font-size: 4rem;
+  }
+  .journey .heading {
+    font-size: 4rem;
+  }
+  .timeline {
+    width: 350px;
+   
+    margin: 0 0;
+  }
+
+
+  .header {
+    padding: 1rem 1%;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .about-content p {
+    text-align: center;
+  }
+
+  .home-img img {
     width: 56vw;
     height: 56vw;
+  }
 
-  
-  }
-  .about{
-    flex-direction: column;
-    text-align: center;
-    
-  }
   .about-img img {
     width: 56vw;
     height: 56vw;
   }
-  .about h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 5rem;
+
+  .home-content h1 {
+    font-size: 4rem;
   }
 
-  
+  .home-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  .gradient-btn {
+    padding: 0.6rem;
+    font-size: 1.6rem;
+  }
+
+  .service-box {
+    height: 350px;
+  }
+
+  .service-info h3 {
+    font-size: 2.5rem;
+  }
+
+  .service-info p {
+    font-size: 1.3rem;
+  }
+
+  .project-card img {
+    max-width: 80%;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .timeline-box h4 {
+    font-size: 1.6rem;
+  }
+
+  .timeline-box p {
+    font-size: 1.2rem;
+  }
 }
-
-
