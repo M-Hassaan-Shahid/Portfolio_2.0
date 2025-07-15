@@ -577,7 +577,10 @@ footer p {
     right: -100%;
     width: 50%;
     height: 100vh;
-    padding: 2rem;
+     margin: -44rem -18rem;
+    padding: 39rem 10rem;
+    padding-right: 28rem;
+    padding-top: 76rem;
     background: rgba(0, 0, 0, 0.9);
     border-bottom-left-radius: 2rem;
     border-left: 2px solid var(--main-color);
