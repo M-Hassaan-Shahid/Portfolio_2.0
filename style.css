@@ -8,7 +8,7 @@
 }
 :root {
   --bg-color: #080808;
-  --second-bg-color: #101010;
+  --second-bg-color: #131313fd;
   --text-color: #fff;
   --main-color: #ea580c;
 }
@@ -326,6 +326,10 @@ section {
   font-size: 5rem;
   margin-bottom: 1rem;
 }
+.projects {
+  background-color: var(--second-bg-color);
+  color: var(--text-color);
+}
 .projects-box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -365,7 +369,7 @@ section {
   font-size: 1.6rem;
 }
 .contact {
-  background-color: var(--bg-color);
+  background-color: var(--second-bg-color);
 }
 .contact h2 {
   color: var(--text-color);
@@ -394,7 +398,7 @@ section {
   resize: none;
 }
 footer {
-  background-color: var(--second-bg-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
   text-align: center;
   padding: 2rem;
@@ -407,7 +411,7 @@ footer p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   background: transparent;
   border: 2px solid var(--main-color);
   border-radius: 50%;
@@ -558,15 +562,70 @@ footer p {
   background: var(--main-color);
   z-index: 0;
 }
+@media(max-width: 1285px){
+  #menu-icon{
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    display: none;
 
-@media (max-width: 768px) {
-  .timeline {
-    padding-left: 2rem;
   }
-  .timeline-dot {
-    left: -2rem;
+  .navbar a {
+    display: block;
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: var(--text-color);
   }
-  .timeline-content {
-    margin-left: 0;
+  .navbar.active{
+    display: block;
   }
+  .home{
+
+    flex-direction: column-reverse;
+    margin: 4rem 0;
+    gap: 8rem;
+  }
+  .home-content h1{
+    /* margin-top: 4rem; */
+    font-size: 5rem;
+    text-align: center;
+  }
+ 
+  .home-content {
+    align-items: center;
+    text-align: center;
+  }
+  .home-img  img{
+    width: 56vw;
+    height: 56vw;
+
+  
+  }
+  .about{
+    flex-direction: column;
+    text-align: center;
+    
+  }
+  .about-img img {
+    width: 56vw;
+    height: 56vw;
+  }
+  .about h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 5rem;
+  }
+
+  
 }
+
+
