@@ -50,7 +50,7 @@ toggleButtons.forEach(button => {
     if (target === 'coding') {
       switchSlider.style.left = '41%';
     } else {
-      switchSlider.style.left = '44%';
+      switchSlider.style.left = '43%';
     }
   });
 });
