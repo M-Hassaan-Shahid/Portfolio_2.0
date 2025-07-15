@@ -47,10 +47,10 @@ toggleButtons.forEach(button => {
     document.getElementById(target).classList.add('active');
 
     // Move slider based on button position
-    if (target === 'coding') {
-      switchSlider.style.left = '41%';
-    } else {
-      switchSlider.style.left = '43%';
-    }
+    // if (target === 'coding') {
+    //   switchSlider.style.left = '41%';
+    // } else {
+    //   switchSlider.style.left = '43%';
+    // }
   });
 });
