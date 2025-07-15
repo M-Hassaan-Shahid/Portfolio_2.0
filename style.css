@@ -373,7 +373,7 @@ section {
 }
 .contact {
   min-height: 100vh;
-  background-color: var(--second-bg-color);
+  background-color: var(--bg-color-color);
 }
 .contact h2 {
   color: var(--text-color);
@@ -405,7 +405,7 @@ section {
   margin-bottom: 2.5rem;
 }
 footer {
-  background-color: var(--bg-color);
+  background-color: var(--second-bg-color);
   color: var(--text-color);
   text-align: center;
   padding: 2rem;
@@ -568,7 +568,7 @@ footer p {
 }
 
 .skills {
-  background-color: var(--bg-color);
+  background-color: var(--second-bg-color);
   color: var(--text-color);
   padding: 8rem 5%;
   min-height: 100vh;
