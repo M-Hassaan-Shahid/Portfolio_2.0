@@ -704,7 +704,7 @@ footer p {
   html {
     font-size: 50%;
   }
-  .header a {
+  .header .logo {
     font-size: 3rem;
   }
   .header #menu-icon {
