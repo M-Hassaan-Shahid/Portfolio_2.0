@@ -12,6 +12,7 @@
   --text-color: #fff;
   --main-color: #ea580c;
 }
+
 html {
   font-size: 60%;
   overflow-x: hidden;
@@ -126,7 +127,7 @@ section {
 }
 
 .home-content p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.8;
 }
@@ -243,7 +244,7 @@ section {
   text-align: left;
 }
 .about-content p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 500;
   line-height: 1.8;
   text-align: left;
