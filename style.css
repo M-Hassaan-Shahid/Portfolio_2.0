@@ -14,11 +14,10 @@
   --main-color: #ea580c;
 }
 .stroke-fill-text {
-
   font-weight: bold;
   color: transparent;
   -webkit-text-stroke: 0.4px var(--main-color); /* Outline color */
-  text-stroke: 0.5px var(--main-color); /* Outline color */        /* For F;         /* For Firefox */
+  text-stroke: 0.5px var(--main-color); /* Outline color */ /* For F;         /* For Firefox */
   background: linear-gradient(90deg, var(--main-color) 100%, transparent 0%);
   background-size: 0% 100%;
   background-repeat: no-repeat;
@@ -121,13 +120,12 @@ section {
 [data-lazy] {
   opacity: 0;
   transform: translateY(0);
-  
 }
 [data-lazy].visible {
   opacity: 1;
   transform: translateY(40px);
-  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-
+  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .home {
   display: flex;
@@ -845,6 +843,7 @@ footer p {
   .contact h2 {
     font-size: 4rem;
   }
+ 
   .journey .heading {
     font-size: 4rem;
   }
@@ -879,7 +878,7 @@ footer p {
     font-size: 4rem;
   }
   .home-content h3 {
-    font-size: 1.8rem;
+    font-size: 2.3rem;
   }
   .btn {
     padding: 0.8rem 2rem;
