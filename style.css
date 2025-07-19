@@ -117,14 +117,17 @@ section {
   min-height: 100vh;
   padding: 10rem 15%;
 }
-.hidden {
+/* Fade-in effect for sections and footer */
+[data-lazy] {
   opacity: 0;
-  transform: translateX(-100px);
-  transition: opacity 2s ease, transform 2s ease;
+  transform: translateY(0);
+  
 }
-.visible {
+[data-lazy].visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(40px);
+  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .home {
   display: flex;
@@ -659,6 +662,22 @@ footer p {
   font-weight: 500;
   background: none;
   color: var(--text-color);
+}
+.section-fade {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.section-fade.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 1185px) {
   #menu-icon {

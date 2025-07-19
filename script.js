@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 const themeToggle = document.querySelector('.gradient-btn');
 const body = document.body;
 const menuIcon = document.querySelector('#menu-icon');
@@ -74,7 +75,10 @@ const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.remove('hidden');
-      entry.target.classList.add('visible');
+      void entry.target.offsetWidth; // Force repaint
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, 10); // Small delay to ensure transition
       observer.unobserve(entry.target); // Stop observing once loaded
     }
   });
@@ -84,6 +88,7 @@ const observer = new IntersectionObserver((entries, observer) => {
   threshold: 0.1 // Trigger when 10% of section is visible
 });
 
-lazySections.forEach(section => {
+[...lazySections, document.querySelector('footer')].forEach(section => {
   observer.observe(section);
+});
 });
