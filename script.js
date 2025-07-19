@@ -6,6 +6,29 @@ const navLinks = document.querySelectorAll('.navbar a');
 const toggleButtons = document.querySelectorAll('.toggle-option');
 const switchSlider = document.querySelector('#switch-slider');
 const skillsContents = document.querySelectorAll('.skills-content');
+const lazySections = document.querySelectorAll('[data-lazy]');
+const titles = [
+  "Software Developer",
+  "Web Developer",
+  "Video Editor"
+];
+let idx = 0;
+const span = document.querySelector('.stroke-fill-text');
+
+function animateTitle() {
+  span.textContent = titles[idx];
+  span.style.animation = 'none';
+  // Trigger reflow to restart animation
+  void span.offsetWidth;
+  span.style.animation = null;
+  idx = (idx + 1) % titles.length;
+}
+
+span.addEventListener('animationend', () => {
+  setTimeout(animateTitle, 1000); // Wait 1s before next title
+});
+
+animateTitle();
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('light-mode');
   const isLightMode = body.classList.contains('light-mode');
@@ -13,10 +36,10 @@ themeToggle.addEventListener('click', () => {
   document.getElementById('sun').style.display = isLightMode ? 'block' : 'none';
 });
 
-menuIcon.addEventListener('click', () => {
+menuIcon.addEventListener('click', (e) => {
+  e.stopPropagation();
   menuIcon.classList.toggle('bx-x');
   navbar.classList.toggle('active');
-
 });
 
 navLinks.forEach(link => {
@@ -37,20 +60,30 @@ window.addEventListener('click', (e) => {
 
 toggleButtons.forEach(button => {
   button.addEventListener('click', () => {
-    // Remove active class from all buttons and contents
     toggleButtons.forEach(btn => btn.classList.remove('active'));
     skillsContents.forEach(content => content.classList.remove('active'));
-
-    // Add active class to clicked button and corresponding content
     button.classList.add('active');
     const target = button.getAttribute('data-target');
     document.getElementById(target).classList.add('active');
-
-    // Move slider based on button position
-    // if (target === 'coding') {
-    //   switchSlider.style.left = '41%';
-    // } else {
-    //   switchSlider.style.left = '43%';
-    // }
+    switchSlider.style.left = target === 'coding' ? '0%' : '50%';
   });
+});
+
+// Lazy loading with Intersection Observer
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove('hidden');
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // Stop observing once loaded
+    }
+  });
+}, {
+  root: null, // Use viewport as root
+  rootMargin: '0px',
+  threshold: 0.1 // Trigger when 10% of section is visible
+});
+
+lazySections.forEach(section => {
+  observer.observe(section);
 });
