@@ -843,7 +843,7 @@ footer p {
   .contact h2 {
     font-size: 4rem;
   }
- 
+
   .journey .heading {
     font-size: 4rem;
   }
@@ -887,6 +887,15 @@ footer p {
   .gradient-btn {
     padding: 0.6rem;
     font-size: 1.6rem;
+  }
+  .light-mode #menu-icon {
+    color: var(--text-color) !important;
+  }
+  .light-mode .navbar a {
+    color: var(--text-color) !important;
+  }
+  .light-mode .navbar {
+    background: var(--bg-color) !important;
   }
   .toggle-option {
     font-size: 1.4rem;
@@ -932,4 +941,10 @@ footer p {
   .skills h2 {
     font-size: 4rem;
   }
+}
+.light-mode #menu-icon {
+  color: var(--text-color) !important;
+}
+.light-mode .navbar a {
+  color: var(--text-color) !important;
 }
