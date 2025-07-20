@@ -382,16 +382,17 @@ section {
   box-shadow: 0 0 20px var(--main-color), 0 0 30px var(--main-color);
 }
 .project-card img {
+  object-fit: fill;
+  min-height: 180px;
   max-width: 300px;
   max-height: 300px;
   border-radius: 2em;
-  object-fit: cover;
 }
 .project-card h3 {
   font-size: 3rem;
 }
 .project-card p {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
 }
 .contact {
   min-height: 100vh;
