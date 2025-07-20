@@ -385,7 +385,7 @@ section {
   object-fit: fill;
   min-height: 180px;
   max-width: 300px;
-  max-height: 300px;
+  max-height: 250px;
   border-radius: 2em;
 }
 .project-card h3 {
