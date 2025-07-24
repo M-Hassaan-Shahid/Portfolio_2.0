@@ -385,7 +385,7 @@ section {
   object-fit: fill;
   min-height: 180px;
   max-width: 300px;
-  max-height: 250px;
+  max-height: 120px;
   border-radius: 2em;
 }
 .project-card h3 {
@@ -927,10 +927,12 @@ footer p {
   .service-info p {
     font-size: 1.3rem;
   }
+
   .project-card img {
     max-width: 80%;
-    max-height: 200px;
+    max-height: 120px;
   }
+
   .timeline-content h3 {
     font-size: 1.8rem;
   }
